@@ -57,9 +57,9 @@ Real estate management SaaS. Property listings, booking with Stripe, real-time c
 
 ### stats
 
-![stats](https://github-readme-stats.vercel.app/api?username=taddheotorres&show_icons=true&count_private=true&hide_border=true&bg_color=0D1117&title_color=c9d1d9&icon_color=8b949e&text_color=8b949e&ring_color=8b949e)
+![stats](https://gh-readme-stats.vercel.app/api?username=taddheotorres&show_icons=true&count_private=true&hide_border=true&bg_color=0D1117&title_color=c9d1d9&icon_color=8b949e&text_color=8b949e&ring_color=8b949e)
 
-![languages](https://github-readme-stats.vercel.app/api/top-langs/?username=taddheotorres&layout=compact&hide_border=true&bg_color=0D1117&title_color=c9d1d9&text_color=8b949e)
+![languages](https://gh-readme-stats.vercel.app/api/top-langs?username=taddheotorres&layout=compact&hide_border=true&bg_color=0D1117&title_color=c9d1d9&text_color=8b949e)
 
 ![streak](https://github-readme-streak-stats.herokuapp.com/?user=taddheotorres&theme=dark&hide_border=true&background=0D1117&stroke=8b949e&ring=8b949e&fire=8b949e&currStreakLabel=c9d1d9&sideNums=8b949e&sideLabels=6c7086&dates=6c7086)
 
