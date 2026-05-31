@@ -1,12 +1,10 @@
-```
-❯ cat /home/taddheo/profile.md
+<img src="https://raw.githubusercontent.com/taddheotorres/taddheotorres/main/banner.png" width="100%" alt="banner">
 
- _            _     _ _
-| |_ __ _  __| | __| | |__   ___  ___
-| __/ _` |/ _` |/ _` | '_ \ / _ \/ _ \
-| || (_| | (_| | (_| | | | |  __/ (_) |
- \__\__,_|\__,_|\__,_|_| |_|\___|\___/
-```
+---
+
+<table>
+  <tr>
+    <td width="65%" valign="top">
 
 ```
 name: Taddheo de Jesus Carballo Torres
@@ -25,6 +23,13 @@ stack:
 
 status: Open to Java Developer Trainee / JR opportunities
 ```
+
+    </td>
+    <td width="35%" valign="top" align="center">
+      <img src="https://raw.githubusercontent.com/taddheotorres/taddheotorres/main/right.jpg" width="100%" alt="about">
+    </td>
+  </tr>
+</table>
 
 ---
 
