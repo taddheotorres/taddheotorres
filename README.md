@@ -1,11 +1,11 @@
-### Hi there! 👋 I'm Taddheo de Jesús Carballo Torres
+### Hi there, I'm Taddheo de Jesus Carballo Torres
 
 **Full Stack Java Developer**
 
-- 🔭 I'm currently working on [Livestate](https://github.com/taddheotorres/livestate) — a real estate management SaaS
-- 🌱 I'm studying Software Engineering @ UABCS (5th semester)
-- 💼 Open to Java Developer Trainee / JR opportunities
-- 📍 La Paz, BCS, México
+- Currently working on [Livestate](https://github.com/taddheotorres/livestate) — a real estate management SaaS
+- Studying Software Engineering @ UABCS (5th semester)
+- Open to Java Developer Trainee / JR opportunities
+- La Paz, BCS, Mexico
 
 **Stack:** Java 17/21 · Spring Boot 4 · Angular 17 · TypeScript · MySQL 8 · Docker · Git · Stripe · WebSockets · JWT
 
