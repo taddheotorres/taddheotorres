@@ -2,10 +2,6 @@
 
 ---
 
-<table>
-  <tr>
-    <td width="65%" valign="top">
-
 ```
 name: Taddheo de Jesus Carballo Torres
 role: Full Stack Java Developer
@@ -23,13 +19,6 @@ stack:
 
 status: Open to Java Developer Trainee / JR opportunities
 ```
-
-    </td>
-    <td width="35%" valign="top" align="center">
-      <img src="https://raw.githubusercontent.com/taddheotorres/taddheotorres/main/right.jpg" width="100%" alt="about">
-    </td>
-  </tr>
-</table>
 
 ---
 
