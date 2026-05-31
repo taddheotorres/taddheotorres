@@ -1,126 +1,134 @@
 <div align="center">
-  
-```txt
-❯ neofetch
-╭───────────────────────────────╮
-│  _   _ _     _               │
-│ | | | | |__ | | ___  ___     │
-│ | |_| | '_ \| |/ _ \/ __|    │
-│ |  _  | |_) | |  __/\__ \    │
-│ |_| |_|_.__/|_|\___||___/    │
-│        Developer             │
-╰───────────────────────────────╯
-```
-
-# Taddheo de Jesús Carballo Torres
-
-### `Full Stack Java Developer`
-
-[![Portfolio](https://img.shields.io/badge/Portfolio-%230a0a0f.svg?style=for-the-badge&logo=firefox&logoColor=#FF7139)](https://taddheotorres.github.io/portfolio/)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/taddheo-torres)
-[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:taddheotorrespro@gmail.com)
-
-[![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)](https://github.com/taddheotorres/livestate)
-[![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=spring&logoColor=white)](https://github.com/taddheotorres/livestate)
-[![Angular](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white)](https://github.com/taddheotorres/livestate)
-[![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)](https://github.com/taddheotorres/livestate)
-[![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://github.com/taddheotorres/livestate)
-
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=28&duration=3000&pause=1000&color=a6e3a1&center=true&vCenter=true&width=600&lines=Hi%2C+I+am+Taddheo+de+Jes%C3%BAs;Full+Stack+Java+Developer;Spring+Boot+%7C+Angular+%7C+MySQL" alt="Typing SVG" />
 </div>
 
 ---
 
-<table>
-  <tr>
-    <td width="50%" valign="top">
+## 🧑‍💻 About Me
 
-### 🚀 About Me
+```yaml
+name: Taddheo de Jesús Carballo Torres
+role: Full Stack Java Developer
+education: Software Engineering @ UABCS (5th semester)
+location: La Paz, BCS, México
 
-Software Engineering student @ UABCS, building full-stack apps with Java, Spring Boot, and Angular.
+backend:
+  - Java 17/21
+  - Spring Boot 4
+  - Spring Data JPA / Hibernate
+  - Spring Security
+  - REST APIs
+  - WebSockets (STOMP)
+  - JWT Authentication
+  - Stripe Integration
 
-- 🌱 Learning: Spring Cloud, Microservices, Kubernetes
-- 🔭 Building: [Livestate](https://github.com/taddheotorres/livestate) — SaaS for real estate management
-- 💼 Open to: Java Developer Trainee / JR opportunities
-- 📍 La Paz, BCS, México
+frontend:
+  - Angular 17
+  - TypeScript
+  - RxJS
+  - HTML / CSS
 
-    </td>
-    <td width="50%" valign="top">
+database:
+  - MySQL 8
 
-### 🛠️ Tech Stack
+infrastructure:
+  - Docker / Docker Compose
+  - Git / GitHub Actions
 
-**Backend**<br>
-Java 17/21 · Spring Boot 4 · Spring Data JPA · Hibernate · Spring Security · REST APIs · JWT · WebSockets · Stripe
+testing:
+  - JUnit 5
+  - Testcontainers
 
-**Frontend**<br>
-Angular 17 · TypeScript · RxJS · HTML · CSS
-
-**Infra & Tools**<br>
-MySQL 8 · Docker · Docker Compose · Git · Maven · JUnit · Testcontainers · MapStruct
-
-    </td>
-  </tr>
-</table>
+tools:
+  - Maven
+  - MapStruct
+  - IntelliJ IDEA
+  - VS Code
+```
 
 ---
 
 ## 📌 Featured Project
 
 <div align="center">
-  <table>
-    <tr>
-      <td width="60%" valign="top">
 
 ### [Livestate](https://github.com/taddheotorres/livestate)
 
-> SaaS de gestión inmobiliaria que conecta anfitriones con inquilinos.
+SaaS de gestión inmobiliaria — Conecta anfitriones con inquilinos
 
-- ✅ JWT authentication + Spring Security
-- ✅ Stripe Checkout para pagos
-- ✅ WebSockets (STOMP) para chat en tiempo real
-- ✅ Docker Compose + CI/CD con GitHub Actions
-- ✅ Testcontainers para tests de integración
+| Feature | Tech |
+|---------|------|
+| 🔐 JWT Authentication | Spring Security + jjwt |
+| 💳 Payments | Stripe Checkout Sessions |
+| 💬 Real-time Chat | WebSockets + STOMP |
+| 🐳 Containerization | Docker + Docker Compose |
+| 🧪 Integration Tests | Testcontainers + JUnit 5 |
+| 🚀 CI/CD | GitHub Actions |
 
-**Stack:** Java 17 · Spring Boot 4 · Angular 17 · MySQL 8 · Docker · Stripe · WebSockets
+[![GitHub](https://img.shields.io/badge/View_on_GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/taddheotorres/livestate)
 
-[![Repo](https://img.shields.io/badge/View_on_GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/taddheotorres/livestate)
+</div>
 
+---
+
+## 📊 GitHub Stats
+
+<div align="center">
+  <table>
+    <tr>
+      <td align="center">
+        <img src="https://github-readme-stats.vercel.app/api?username=taddheotorres&show_icons=true&count_private=true&hide_border=true&bg_color=0D1117&title_color=a6e3a1&icon_color=a6e3a1&text_color=cdd6f4&ring_color=a6e3a1" width="400" />
       </td>
-      <td width="40%" valign="top" align="center">
-
-![Java](https://img.shields.io/badge/Java_17-ED8B00?logo=openjdk&logoColor=white)
-![Spring](https://img.shields.io/badge/Spring_Boot_4-6DB33F?logo=spring&logoColor=white)
-![Angular](https://img.shields.io/badge/Angular_17-DD0031?logo=angular&logoColor=white)
-![MySQL](https://img.shields.io/badge/MySQL_8-4479A1?logo=mysql&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white)
-![Stripe](https://img.shields.io/badge/Stripe-008CDD?logo=stripe&logoColor=white)
-
+      <td align="center">
+        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=taddheotorres&layout=compact&hide_border=true&bg_color=0D1117&title_color=a6e3a1&text_color=cdd6f4" width="350" />
       </td>
     </tr>
   </table>
 </div>
 
+<div align="center">
+  
+[![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=taddheotorres&theme=dark&hide_border=true&background=0D1117&stroke=a6e3a1&ring=a6e3a1&fire=a6e3a1&currStreakLabel=cdd6f4&sideNums=cdd6f4&sideLabels=6c7086&dates=6c7086)](https://git.io/streak-stats)
+
+</div>
+
 ---
+
+## 📈 Contribution Graph
+
+<div align="center">
+  
+[![Ashutosh's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=taddheotorres&bg_color=0D1117&color=a6e3a1&line=a6e3a1&point=cdd6f4&area=true&hide_border=true)](https://github.com/ashutosh00710/github-readme-activity-graph)
+
+</div>
+
+---
+
+## 🏆 Holopin Badges
 
 <div align="center">
 
-### 📊 GitHub Stats
+[![@taddheotorres](https://holopin.io/api/user/board?user=taddheotorres)](https://holopin.io/@taddheotorres)
 
-<img src="https://github-readme-stats.vercel.app/api?username=taddheotorres&show_icons=true&theme=dark&hide_border=true&bg_color=0D1117&title_color=a6e3a1&icon_color=a6e3a1&text_color=cdd6f4" height="160">
+</div>
 
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=taddheotorres&layout=compact&theme=dark&hide_border=true&bg_color=0D1117&title_color=a6e3a1&text_color=cdd6f4" height="160">
+---
 
-[![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=taddheotorres&theme=dark&hide_border=true&background=0D1117&stroke=a6e3a1&ring=a6e3a1&fire=a6e3a1&currStreakLabel=cdd6f4)](https://git.io/streak-stats)
+## 🤝 Connect with Me
+
+<div align="center">
+  
+[![Portfolio](https://img.shields.io/badge/Portfolio-%230a0a0f.svg?style=for-the-badge&logo=firefox&logoColor=#FF7139)](https://taddheotorres.github.io/portfolio/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/taddheo-torres)
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:taddheotorrespro@gmail.com)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/taddheotorres)
 
 </div>
 
 ---
 
 <div align="center">
+  <img src="https://komarev.com/ghpvc/?username=taddheotorres&label=Profile%20Views&color=a6e3a1&style=flat" alt="Profile views" />
   
-**📍 La Paz, BCS, México · 📫 taddheotorrespro@gmail.com**
-
-*"constantly learning, shipping, and improving."*
-
-<img src="https://komarev.com/ghpvc/?username=taddheotorres&style=for-the-badge&color=a6e3a1" alt="Profile views">
-
+  ***"building software, one commit at a time."***
 </div>
