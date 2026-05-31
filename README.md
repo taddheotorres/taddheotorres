@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/taddheotorres/taddheotorres/main/banner.png" width="100%" alt="banner">
+<img src="https://raw.githubusercontent.com/taddheotorres/taddheotorres/aaf3fef1/banner.png" width="100%" alt="banner">
 
 ---
 
