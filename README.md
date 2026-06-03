@@ -23,7 +23,7 @@ status: Open to Java Developer Trainee / JR opportunities
 ---
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-333333?style=for-the-badge)](https://taddheotorres.github.io/portfolio/)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-555555?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/taddheo-torres)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-555555?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/taddheo-torres-a5420227b/)
 [![Email](https://img.shields.io/badge/Email-444444?style=for-the-badge&logo=gmail&logoColor=white)](mailto:taddheotorrespro@gmail.com)
 
 ---
