@@ -4,17 +4,17 @@
 
 ```
 name: Taddheo de Jesus Carballo Torres
-role: Full Stack Java Developer
+role: Full Stack Java Developer | Ciberseguridad (entry)
 education: Software Engineering @ UABCS (5th sem)
 location: La Paz, BCS, Mexico
 
 stack:
-  backend:    Java 17/21, Spring Boot 4, JPA/Hibernate, REST, JWT
-  frontend:   Angular 17, TypeScript, RxJS
-  database:   MySQL 8
+  backend:    Java 17/21, Spring Boot 3.4 / 4, JPA/Hibernate, REST, JWT, WebSockets
+  frontend:   Angular 17/21, TypeScript, RxJS
+  database:   MySQL 8, PostgreSQL, H2
   infra:      Docker, Docker Compose, GitHub Actions
+  security:   Spring Security, JWT, CORS, CSRF, OWASP
   payments:   Stripe API
-  realtime:   WebSockets, STOMP
   testing:    JUnit 5, Testcontainers
 
 status: Open to Java Developer Trainee / JR opportunities
@@ -28,19 +28,35 @@ status: Open to Java Developer Trainee / JR opportunities
 
 ---
 
-### featured project
+### projects
 
+**honeypot-api** · *señuelo REST que registra ataques simulados en tiempo real*
+`Java 21` `Spring Boot 3.4` `WebSocket (STOMP)` `JPA` `H2` `Angular 21` `Docker Compose`
 ```
-livestate/
-├── backend/     Spring Boot 4 + JPA + JWT + Stripe + WebSockets
-├── frontend/    Angular 17 + TypeScript + RxJS
-├── docker/      MySQL 8 + Docker Compose
-└── ci/          GitHub Actions + Testcontainers
+POST /api/iniciar-sesion   →  brute force
+GET  /api/productos?id=    →  SQL injection
+GET  /api/buscar?q=        →  XSS
+GET  /api/usuarios         →  no auth
 ```
+[view on github](https://github.com/taddheotorres/honeypot-api) · [dashboard](https://taddheotorres.github.io/honeypot-api)
 
-Real estate management SaaS. Property listings, booking with Stripe, real-time chat, JWT auth.
-
+**livestate** · *SaaS de gestión inmobiliaria con pagos y chat en tiempo real*
+`Java 17` `Spring Boot 4` `Angular 17` `MySQL 8` `Stripe` `JWT` `WebSockets` `Docker`
+```
+backend/  →  Spring Boot 4 + JPA + JWT + Stripe + WebSockets
+frontend/ →  Angular 17 + TypeScript + RxJS
+docker/   →  MySQL 8 + Docker Compose
+ci/       →  GitHub Actions + Testcontainers
+```
 [view on github](https://github.com/taddheotorres/livestate)
+
+**commitstory** · *dashboard analítico que narra la historia visual de un repo Git*
+`Java 21` `Spring Boot 3.4` `JGit` `Flyway` `PostgreSQL`
+[view on github](https://github.com/taddheotorres/commitstory)
+
+**no-swipe-overview** · *extensión GNOME Shell que bloquea el swipe al overview*
+`JavaScript` `GNOME 48` `GJS`
+[view on github](https://github.com/taddheotorres/no-swipe-overview)
 
 ---
 
