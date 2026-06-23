@@ -51,7 +51,7 @@ ci/       →  GitHub Actions + Testcontainers
 ```
 [view on github](https://github.com/taddheotorres/livestate)
 
-**commitstory** · *dashboard analítico que narra la historia visual de un repo Git*
+**prismgit** · *dashboard analítico que narra la historia visual de un repo Git*
 `Java 21` `Spring Boot 3.4` `Angular 19` `JGit` `Flyway` `PostgreSQL` `Swagger` `Docker`
 ```
 14 REST endpoints    →  repos, commits, analytics, stories
