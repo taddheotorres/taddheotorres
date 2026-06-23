@@ -60,7 +60,7 @@ JGit + GitHub API    →  sync commits from local or remote repos
 Swagger docs         →  interactive API docs at /swagger-ui.html
 100+ tests           →  JUnit/Mockito (backend) + Jasmine (frontend)
 ```
-[view on github](https://github.com/taddheotorres/commitstory) · [live demo](https://commitstory-production.up.railway.app)
+[view on github](https://github.com/taddheotorres/commitstory) · [live demo](https://prismgit-production.up.railway.app)
 
 **no-swipe-overview** · *extensión GNOME Shell que bloquea el swipe al overview*
 `JavaScript` `GNOME 48` `GJS`
