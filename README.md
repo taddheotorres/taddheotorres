@@ -10,7 +10,7 @@ location: La Paz, BCS, Mexico
 
 stack:
   backend:    Java 17/21, Spring Boot 3.4, JPA/Hibernate, REST, JWT, WebSockets
-  frontend:   Angular 19, TypeScript, RxJS
+  frontend:   Angular 19/21, TypeScript, RxJS
   database:   MySQL 8, PostgreSQL, H2, Flyway
   infra:      Docker, Docker Compose, Railway, nginx
   security:   Spring Security, JWT, CORS, CSRF, OWASP
@@ -31,15 +31,15 @@ status: Open to Java Developer Trainee / JR opportunities
 
 ### projects
 
-**honeypot-api** · *señuelo REST que registra ataques simulados en tiempo real*
-`Java 21` `Spring Boot 3.4` `WebSocket (STOMP)` `JPA` `H2` `Angular` `Docker Compose`
+**honeypot-api** · *señuelo REST desplegado en Railway que registra ataques en tiempo real*
+`Java 21` `Spring Boot 3.4` `WebSocket (STOMP)` `JPA` `PostgreSQL` `Angular 21` `nginx` `Railway` `Docker`
 ```
 POST /api/iniciar-sesion   →  brute force
 GET  /api/productos?id=    →  SQL injection
 GET  /api/buscar?q=        →  XSS
 GET  /api/usuarios         →  no auth
 ```
-[view on github](https://github.com/taddheotorres/honeypot-api) · [dashboard](https://taddheotorres.github.io/honeypot-api)
+[dashboard en vivo](https://honeypot-api-production-a5bc.up.railway.app) · [diagnostico](https://honeypot-api-production-a5bc.up.railway.app/diagnostico) · [view on github](https://github.com/taddheotorres/honeypot-api)
 
 **livestate** · *SaaS de gestión inmobiliaria con pagos y chat en tiempo real*
 `Java 17` `Spring Boot` `Angular` `MySQL 8` `Stripe` `JWT` `WebSockets` `Docker`
