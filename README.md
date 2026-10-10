@@ -1,4 +1,3 @@
-<img src="https://raw.githubusercontent.com/taddheotorres/taddheotorres/2459190ba278afc513a074b318f793f76c6264f4/newimage.png" width="100%" alt="banner">
 
 ---
 
