@@ -35,7 +35,7 @@ BRAND = """
 
 INFO = [
     ("user", USER), ("role", "Full Stack Java Developer"), ("focus", "Backend, Ciberseguridad"),
-    ("base", "La Paz, BCS, MX"), ("school", "Software Eng. @ UABCS"),
+    ("base", "La Paz, BCS, MX"), ("school", "Software Eng. @ UABCS"), ("os", "Debian, Nobara, Windows"),
     None,
     ("stack.backend", "Java 21, Spring Boot 3.4, JPA"), ("stack.frontend", "Angular 21, TypeScript, RxJS"),
     ("stack.data", "PostgreSQL, MySQL 8, Flyway"), ("stack.infra", "Docker, nginx, Railway"),
