@@ -120,24 +120,27 @@ for i, line in enumerate(BRAND):
     shade = C["brand"][max(0, 3 - abs(i - 6) // 4)] if line.strip() else C["bg"]
     text(BX, by + i * LH, [(line.ljust(bcols), shade, True)], bcols, 14)
 
-# contribution grid
+# contribution grid, stretched to the same margins as the panel above
+RIGHT = RX + COLS * CW
 y = panel_bottom + LH * 3
-text(30, y, [("- contributions ", C["head"], True), ("─" * 92, C["dim"], False)], 107)
+gcols = (RIGHT - 30) / CW
+text(30, y, [("- contributions ", C["head"], True), ("─" * (round(gcols) - 16), C["dim"], False)], gcols)
 weeks, peak = cal["weeks"], max([d["contributionCount"] for w in cal["weeks"] for d in w["contributionDays"]] + [1])
-GX, GY, S = 50, y + 22, 15
+GX, GY = 30, y + 22
+S = (RIGHT - GX - 8) / (len(weeks) - 1)  # 8 = glyph width, so the last column ends on RIGHT
 for wi, w in enumerate(weeks):
     for d in w["contributionDays"]:
         n = d["contributionCount"]
         lvl = 0 if n == 0 else min(4, 1 + int(4 * n / (peak + 1)))
         ch = "·" if lvl == 0 else "█"
-        out.append(f'<text x="{GX + wi * S}" y="{GY + d["weekday"] * S}" font-size="14" fill="{GRID[lvl]}">{ch}</text>')
-y = GY + 7 * S + 12
+        out.append(f'<text x="{GX + wi * S:.1f}" y="{GY + d["weekday"] * 15}" font-size="14" fill="{GRID[lvl]}">{ch}</text>')
+y = GY + 7 * 15 + 12
 text(GX, y, [(f'{cal["totalContributions"]} contributions in the last year', C["val"], False)])
-lx = GX + len(weeks) * S - 150
-text(lx, y, [("less ", C["key"], False)])
+out.append(f'<text x="{RIGHT:.1f}" y="{y}" font-size="13" text-anchor="end" fill="{C["key"]}">more</text>')
+lx = RIGHT - 4 * CW - 6 - 5 * 14
 for i, c in enumerate(GRID):
-    out.append(f'<text x="{lx + 42 + i * 14}" y="{y}" font-size="14" fill="{c}">{"·" if i == 0 else "█"}</text>')
-text(lx + 42 + 5 * 14 + 4, y, [("more", C["key"], False)])
+    out.append(f'<text x="{lx + i * 14:.1f}" y="{y}" font-size="14" fill="{c}">{"·" if i == 0 else "█"}</text>')
+out.append(f'<text x="{lx - 6:.1f}" y="{y}" font-size="13" text-anchor="end" fill="{C["key"]}">less</text>')
 
 H, W = y + 30, 900
 svg = (f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" '
