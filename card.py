@@ -108,10 +108,6 @@ y += LH * 2; rule(RX, y, "- github stats")
 for k, v in STATS:
     y += LH; row(RX, y, k, v)
 y += LH * 2
-text(RX, y, [("> ", C["head"], False), ("the brand bleeds when danger is near.", C["val"], False)])
-y += LH
-text(RX, y, [("> ", C["head"], False), ("keep struggling.", C["val"], False)])
-y += LH * 2
 text(RX, y, [("taddheo@eclipse", C["key"], True), (":~$ ", C["val"], False)])
 out.append(f'<rect x="{RX + 19 * CW:.1f}" y="{y - 11}" width="8" height="14" fill="{C["key"]}">'
            '<animate attributeName="opacity" values="1;1;0;0" dur="1.1s" repeatCount="indefinite"/></rect>')
