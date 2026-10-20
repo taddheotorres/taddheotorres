@@ -199,7 +199,7 @@ save("card.svg", out, y + 30, f"{USER} / card.svg · updated {date.today()}")
 
 # project cards for the README: same look as the main card, one SVG per repo so each can link to it
 PROJECTS = [
-    ("livestate", "plataforma de bienes raíces con pagos y chat en tiempo real", [
+    ("livestate", "demo para clientes: bienes raíces con pagos y chat en tiempo real", [
         ("stack", "Java 17 · Spring Boot · Angular · MySQL 8 · Stripe · JWT · WebSockets · Docker"),
         ("backend/", "Spring Boot + JPA + JWT + Stripe + WebSockets"),
         ("frontend/", "Angular + TypeScript + RxJS"),
@@ -227,8 +227,11 @@ text(30, 30, [("- projects ", C["head"], True), ("─" * (PCOLS - 11), C["dim"],
 save("projects/header.svg", head, 46)
 for name, desc, rows in PROJECTS:
     body = []
-    text(30, 36, [("[ ", C["dot"], False), (name, C["key"], True), (" ]", C["dot"], False), ("  " + desc, C["val"], False)],
-         into=body)
+    # a "demo:" description gets its own red tag, so client demos read differently from tools
+    tag, _, rest = desc.partition(": ") if desc.startswith("demo") else ("", "", desc)
+    text(30, 36, [("[ ", C["dot"], False), (name, C["key"], True), (" ]", C["dot"], False)]
+         + ([("  [", C["dot"], False), (tag.upper(), C["head"], True), ("]", C["dot"], False)] if tag else [])
+         + [("  " + rest, C["val"], False)], into=body)
     text(30, 56, [("─" * PCOLS, C["dim"], False)], PCOLS, into=body)
     py = 56
     for k, v in rows:
