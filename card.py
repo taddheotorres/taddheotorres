@@ -92,11 +92,11 @@ TOP = sorted(LANGS.items(), key=lambda kv: -kv[1])[:8]
 out, y = [], 0
 
 
-def text(x, y, spans, cols=None, size=13):
+def text(x, y, spans, cols=None, size=13, into=None):
     """One line; textLength pins it to `cols` chars so leaders line up in any monospace font."""
     fit = f' textLength="{cols * CW:.1f}" lengthAdjust="spacingAndGlyphs"' if cols else ""
     body = "".join(f'<tspan fill="{c}"{" font-weight=\"bold\"" if b else ""}>{escape(s)}</tspan>' for s, c, b in spans)
-    out.append(f'<text x="{x}" y="{y}" font-size="{size}" xml:space="preserve"{fit}>{body}</text>')
+    (out if into is None else into).append(f'<text x="{x}" y="{y}" font-size="{size}" xml:space="preserve"{fit}>{body}</text>')
 
 
 def rule(x, y, label):
@@ -185,11 +185,56 @@ for i, c in enumerate(GRID):
     out.append(f'<text x="{lx + i * 14:.1f}" y="{y}" font-size="14" fill="{c}">{"·" if i == 0 else "█"}</text>')
 out.append(f'<text x="{lx - 6:.1f}" y="{y}" font-size="13" text-anchor="end" fill="{C["key"]}">less</text>')
 
-H, W = y + 30, 900
-svg = (f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" '
-       f'font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,\'DejaVu Sans Mono\',monospace">'
-       f'<rect width="{W}" height="{H}" rx="10" fill="{C["bg"]}" stroke="{C["frame"]}"/>'
-       f'<text x="30" y="32" font-size="12" fill="{C["dot"]}">{USER} / card.svg · updated {date.today()}</text>'
-       + "".join(out) + "</svg>")
-open("card.svg", "w").write(svg)
-print("card.svg", H, "px tall")
+def save(path, body, height, caption=None, width=900):
+    caption = (f'<text x="30" y="32" font-size="12" fill="{C["dot"]}">{escape(caption)}</text>' if caption else "")
+    with open(path, "w") as f:
+        f.write(f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}" '
+                f'font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,\'DejaVu Sans Mono\',monospace">'
+                f'<rect width="{width}" height="{height}" rx="10" fill="{C["bg"]}" stroke="{C["frame"]}"/>'
+                + caption + "".join(body) + "</svg>")
+    print(path, height, "px tall")
+
+
+save("card.svg", out, y + 30, f"{USER} / card.svg · updated {date.today()}")
+
+# project cards for the README: same look as the main card, one SVG per repo so each can link to it
+PROJECTS = [
+    ("livestate", "plataforma de bienes raíces con pagos y chat en tiempo real", [
+        ("stack", "Java 17 · Spring Boot · Angular · MySQL 8 · Stripe · JWT · WebSockets · Docker"),
+        ("backend/", "Spring Boot + JPA + JWT + Stripe + WebSockets"),
+        ("frontend/", "Angular + TypeScript + RxJS"),
+        ("docker/", "MySQL 8 + Docker Compose"),
+        ("ci/", "GitHub Actions + Testcontainers")]),
+    ("prismgit", "dashboard que narra la historia visual de un repo Git", [
+        ("stack", "Java 21 · Spring Boot 3.4 · Angular 19 · JGit · Flyway · PostgreSQL · Swagger · Docker"),
+        ("api", "14 endpoints REST: repos, commits, analytics, stories"),
+        ("dashboard", "stats, timelines, heatmaps, story viewer"),
+        ("sync", "JGit + GitHub API, repos locales o remotos"),
+        ("tests", "100+ con JUnit/Mockito y Jasmine")]),
+    ("crystalctl", "gestor local de tu stack: CLI + panel estilo terminal ASCII", [
+        ("stack", "Python · systemd · HTML/CSS · apt / dnf / pacman / zypper"),
+        ("web", "Apache · Nginx · PHP-FPM"),
+        ("sql", "MariaDB · MySQL · PostgreSQL"),
+        ("nosql", "MongoDB · Redis / Valkey · Memcached"),
+        ("panel", "127.0.0.1 + token por arranque, acciones root vía pkexec")]),
+    ("no-swipe-overview", "extensión de GNOME Shell que bloquea el swipe al overview", [
+        ("stack", "JavaScript · GJS · GNOME 48")]),
+]
+PCOLS = round((900 - 60) / CW)
+os.makedirs("projects", exist_ok=True)
+head = []
+text(30, 30, [("- projects ", C["head"], True), ("─" * (PCOLS - 11), C["dim"], False)], PCOLS, into=head)
+save("projects/header.svg", head, 46)
+for name, desc, rows in PROJECTS:
+    body = []
+    text(30, 36, [("[ ", C["dot"], False), (name, C["key"], True), (" ]", C["dot"], False), ("  " + desc, C["val"], False)],
+         into=body)
+    text(30, 56, [("─" * PCOLS, C["dim"], False)], PCOLS, into=body)
+    py = 56
+    for k, v in rows:
+        py += LH
+        dots = PCOLS - len(k) - len(v) - 4
+        assert dots > 0, (name, k)
+        text(30, py, [(k, C["key"], True), (": ", C["dot"], False), ("." * dots, C["dot"], False),
+                      ("  " + v, C["val"], False)], PCOLS, into=body)
+    save(f"projects/{name}.svg", body, py + 24)

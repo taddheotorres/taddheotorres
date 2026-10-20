@@ -6,36 +6,12 @@
   <a href="mailto:taddheotorrespro@gmail.com"><img src="https://img.shields.io/badge/email-0a0204?style=for-the-badge&labelColor=0a0204&color=8b0a0f&logoColor=ff3b3b&logo=gmail" alt="Email"></a>
 </p>
 
-### ▸ projects
+<img src="./projects/header.svg" alt="projects" width="100%">
 
-**[livestate](https://github.com/taddheotorres/livestate)** · *plataforma de bienes raíces con pagos y chat en tiempo real*
-```diff
-- stack     Java 17 · Spring Boot · Angular · MySQL 8 · Stripe · JWT · WebSockets · Docker
-- backend/  →  Spring Boot + JPA + JWT + Stripe + WebSockets
-- frontend/ →  Angular + TypeScript + RxJS
-- docker/   →  MySQL 8 + Docker Compose
-- ci/       →  GitHub Actions + Testcontainers
-```
+<a href="https://github.com/taddheotorres/livestate"><img src="./projects/livestate.svg" alt="livestate · plataforma de bienes raíces con pagos y chat en tiempo real" width="100%"></a>
 
-**[prismgit](https://github.com/taddheotorres/prismgit)** · *dashboard que narra la historia visual de un repo Git*
-```diff
-- stack     Java 21 · Spring Boot 3.4 · Angular 19 · JGit · Flyway · PostgreSQL · Swagger · Docker
-- api       →  14 endpoints REST: repos, commits, analytics, stories
-- dashboard →  stats, timelines, heatmaps, story viewer
-- sync      →  JGit + GitHub API, repos locales o remotos
-- tests     →  100+ con JUnit/Mockito y Jasmine
-```
+<a href="https://github.com/taddheotorres/prismgit"><img src="./projects/prismgit.svg" alt="prismgit · dashboard que narra la historia visual de un repo Git" width="100%"></a>
 
-**[crystalctl](https://github.com/taddheotorres/crystalctl)** · *gestor local de tu stack: CLI + panel liquid glass*
-```diff
-- stack     Python · systemd · HTML/CSS · apt / dnf / pacman / zypper
-- web       →  Apache · Nginx · PHP-FPM
-- sql       →  MariaDB · MySQL · PostgreSQL
-- nosql     →  MongoDB · Redis / Valkey · Memcached
-- panel     →  127.0.0.1 + token por arranque, acciones root vía pkexec
-```
+<a href="https://github.com/taddheotorres/crystalctl"><img src="./projects/crystalctl.svg" alt="crystalctl · gestor local de tu stack: CLI + panel estilo terminal ASCII" width="100%"></a>
 
-**[no-swipe-overview](https://github.com/taddheotorres/no-swipe-overview)** · *extensión de GNOME Shell que bloquea el swipe al overview*
-```diff
-- stack     JavaScript · GJS · GNOME 48
-```
+<a href="https://github.com/taddheotorres/no-swipe-overview"><img src="./projects/no-swipe-overview.svg" alt="no-swipe-overview · extensión de GNOME Shell que bloquea el swipe al overview" width="100%"></a>
