@@ -1,9 +1,9 @@
 <img src="./card.svg" alt="taddheotorres" width="100%">
 
 <p align="center">
-  <a href="https://taddheotorres.github.io/portfolio/"><img src="https://img.shields.io/badge/portfolio-0a0204?style=for-the-badge&labelColor=0a0204&color=8b0a0f&logoColor=ff3b3b&logo=githubpages" alt="Portfolio"></a>
-  <a href="https://www.linkedin.com/in/taddheo-torres-a5420227b/"><img src="https://img.shields.io/badge/linkedin-0a0204?style=for-the-badge&labelColor=0a0204&color=8b0a0f&logoColor=ff3b3b&logo=linkedin" alt="LinkedIn"></a>
-  <a href="mailto:taddheotorrespro@gmail.com"><img src="https://img.shields.io/badge/email-0a0204?style=for-the-badge&labelColor=0a0204&color=8b0a0f&logoColor=ff3b3b&logo=gmail" alt="Email"></a>
+  <a href="https://taddheotorres.github.io/portfolio/"><img src="https://img.shields.io/badge/portfolio-0a0c10?style=for-the-badge&labelColor=0a0c10&color=8b0a0f&logoColor=ff3b3b&logo=githubpages" alt="Portfolio"></a>
+  <a href="https://www.linkedin.com/in/taddheo-torres-a5420227b/"><img src="https://img.shields.io/badge/linkedin-0a0c10?style=for-the-badge&labelColor=0a0c10&color=8b0a0f&logoColor=ff3b3b&logo=linkedin" alt="LinkedIn"></a>
+  <a href="mailto:taddheotorrespro@gmail.com"><img src="https://img.shields.io/badge/email-0a0c10?style=for-the-badge&labelColor=0a0c10&color=8b0a0f&logoColor=ff3b3b&logo=gmail" alt="Email"></a>
 </p>
 
 <img src="./projects/header.svg" alt="projects" width="100%">
