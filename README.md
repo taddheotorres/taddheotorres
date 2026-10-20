@@ -26,7 +26,7 @@
 - tests     →  100+ con JUnit/Mockito y Jasmine
 ```
 
-**[Lamp_ControlPanel](https://github.com/taddheotorres/Lamp_ControlPanel)** · *gestor local de tu stack: CLI + panel liquid glass*
+**[crystalctl](https://github.com/taddheotorres/crystalctl)** · *gestor local de tu stack: CLI + panel liquid glass*
 ```diff
 - stack     Python · systemd · HTML/CSS · apt / dnf / pacman / zypper
 - web       →  Apache · Nginx · PHP-FPM
