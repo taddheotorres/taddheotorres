@@ -1,5 +1,5 @@
-"""Builds card.svg: Brand of Sacrifice + profile info + contribution grid. Stdlib only."""
-import json, os, urllib.request
+"""Builds card.svg: ASCII spider + profile info + contribution grid. Stdlib only."""
+import json, os, re, urllib.request
 from datetime import date
 from xml.sax.saxutils import escape
 
@@ -7,30 +7,38 @@ USER = os.environ.get("GH_USER", "taddheotorres")
 TOKEN = os.environ["GH_TOKEN"]
 
 BRAND = """
-
-                     --
-                     **
-                     %%
-                :+#%@@@@%#+:
-             .+@@@@@@@@@@@@@@+.
-            +@@@@@#*@@@@*#@@@@@+
-          .%@@%+.   @@@@   .+%@@%.
-         .@@@=     .@@@@.     =@@@.
-         %@%.       @@@@       .%@%
-        *@#         @@@@         #@*
-       .@#          %@@%          #@.
-       +@.          *@@*          .@+
-       %-           +@@+           -%
-       #            =@@=            #
-       .            :@@:            ..
-                    .@@.
-                     @@
-                     %%
-                     ##
-                     **
-                     ==
-                     --
-                     ::
+                        :--=--:.
+                       *%+-:.  .:                   .:==--:.
+                      -%:      ..                 -*%##+----:.::
+                     :%=       =             .-+**=:.        --
+                    :%#       ==        :--*#*+:          .--
+                    =@*      :*.      .*@%+-..          .==.
+                    .*#+.   .*-      :%%=   .         .==:
+                   . .%%....++    ...#%.    .       :==.
+                  .  .-@=..=#-...  .#%.    .      .==.
+              ===.   . #%.:*+    ..+@-     .    :+#***+=--::.
+             .#+%#-  . -@*=+:...  :@+..    :-+*****=:     ..
+              - :+@=. ..%@-:      #%: :-+*%#*=...       ...
+              :.. -**:  +%++= .  :@=.*%%#+.   .      .-:.
+         =-.#%#-:. .*@*=#@@%**#:-%+-%#=:.   ..    .-+=.
+       .#@*@@++#@@%@@@@@@@@@@@%@#*##-.  .  .   :-++-.
+      .%%=+-.:+@@@*=+%@@@@@@@@%#%*:..  .  ::-=++-.
+      +*:-.. :@@%+++#@@@@@@@@@@@@%-....:-++=-:
+    .#*.:   .#@@@@@@@@@@@@@%@@%++##+=-:::.
+   :*#  ....-@@@@@@@@@@@@%#@@@#===*#=. :
+  .#*.     .:%@@@@@@@@@@%%@@@+=-:. +#= .
+  *#..      .+@@@@@@@@@@@@@%+=-    .:*=
+  #-    ... :=#@@@@@@@@@@@#**+=....   --
+  #........:==+*%%%@@@@@%#++=-:::.     :-
+ .+      .--:--==++++#@%*+-     .:::.   .:
+ .:    :-:    ......+*#*+.          ......
+ :  .:-.        .  -%=++.
+ :..:            ..#:-=.
+  .              .+::-
+                 -:::
+                ::-.
+               .-:
+               :
 """.strip("\n").split("\n")
 
 INFO = [
@@ -47,9 +55,9 @@ INFO = [
 COLS = 58          # chars per right-panel line
 CW, LH = 7.9, 17   # char width / line height in px
 
-C = dict(bg="#03050a", frame="#0f1b33", dim="#1b2a4a", dot="#1e3a6b", key="#7cb7ff", val="#c7dcff",
-         head="#3b82f6", brand=("#0b1f4d", "#1d4ed8", "#60a5fa", "#bfdbfe"))
-GRID = ["#0d1526", "#123a7a", "#1d5fd0", "#4a8ff0", "#a9cdff"]
+C = dict(bg="#050203", frame="#2a0a0c", dim="#3a0d10", dot="#5c1216", key="#ff3b3b", val="#f2c4c4",
+         head="#d11a1a", brand=("#7a0a0e", "#c0121a", "#ff2a2a", "#ff8a8a"))
+GRID = ["#1a0608", "#5c0a0e", "#9b0f15", "#d8141c", "#ff5a5a"]
 
 
 def gql(query):
@@ -113,12 +121,14 @@ out.append(f'<rect x="{RX + 19 * CW:.1f}" y="{y - 11}" width="8" height="14" fil
            '<animate attributeName="opacity" values="1;1;0;0" dur="1.1s" repeatCount="indefinite"/></rect>')
 panel_bottom = y
 
-# brand, vertically centred against the panel, darker at the tips
-BX, bcols = 30, max(map(len, BRAND))
-by = 60 + (panel_bottom - 60 - (len(BRAND) - 1) * LH) / 2
+# spider, vertically centred against the panel; denser chars get brighter reds
+BX, bcols, BLH = 30, max(map(len, BRAND)), 11
+TIER = {c: i for i, cs in enumerate([" .:-", "=+*", "#%", "@"]) for c in cs}
+by = 60 + (panel_bottom - 60 - (len(BRAND) - 1) * BLH) / 2
 for i, line in enumerate(BRAND):
-    shade = C["brand"][max(0, 3 - abs(i - 6) // 4)] if line.strip() else C["bg"]
-    text(BX, by + i * LH, [(line.ljust(bcols), shade, True)], bcols, 14)
+    runs = [(m.group(), C["brand"][TIER[m.group()[0]]], True)
+            for m in re.finditer(r"[ .:-]+|[=+*]+|[#%]+|@+", line.ljust(bcols))]
+    text(BX, by + i * BLH, runs, bcols * 5.5 / CW, 9.2)
 
 # contribution grid, stretched to the same margins as the panel above
 RIGHT = RX + COLS * CW
