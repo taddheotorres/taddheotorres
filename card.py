@@ -218,7 +218,7 @@ PROJECTS = [
         ("nosql", "MongoDB · Redis / Valkey · Memcached"),
         ("panel", "127.0.0.1 + token por arranque, acciones root vía pkexec")]),
     ("no-swipe-overview", "extensión de GNOME Shell que bloquea el swipe al overview", [
-        ("stack", "JavaScript · GJS · GNOME 48")]),
+        ("stack", "JavaScript · GJS · GNOME 48–51")]),
 ]
 PCOLS = round((900 - 60) / CW)
 os.makedirs("projects", exist_ok=True)
