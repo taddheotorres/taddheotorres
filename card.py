@@ -199,7 +199,7 @@ save("card.svg", out, y + 30, f"{USER} / card.svg · updated {date.today()}")
 
 # project cards for the README: same look as the main card, one SVG per repo so each can link to it
 PROJECTS = [
-    ("livestate", "demo para clientes: bienes raíces con pagos y chat en tiempo real", [
+    ("livestate", "demo: plataforma de bienes raíces con pagos y chat en tiempo real", [
         ("stack", "Java 17 · Spring Boot · Angular · MySQL 8 · Stripe · JWT · WebSockets · Docker"),
         ("backend/", "Spring Boot + JPA + JWT + Stripe + WebSockets"),
         ("frontend/", "Angular + TypeScript + RxJS"),

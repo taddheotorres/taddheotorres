@@ -8,7 +8,7 @@
 
 <img src="./projects/header.svg" alt="projects" width="100%">
 
-<a href="https://github.com/taddheotorres/livestate"><img src="./projects/livestate.svg" alt="livestate · demo para clientes: bienes raíces con pagos y chat en tiempo real" width="100%"></a>
+<a href="https://github.com/taddheotorres/livestate"><img src="./projects/livestate.svg" alt="livestate · demo: plataforma de bienes raíces con pagos y chat en tiempo real" width="100%"></a>
 
 <a href="https://github.com/taddheotorres/prismgit"><img src="./projects/prismgit.svg" alt="prismgit · dashboard que narra la historia visual de un repo Git" width="100%"></a>
 
