@@ -49,7 +49,7 @@ INFO = [
     ("stack.data", "PostgreSQL, MySQL 8, Flyway"), ("stack.infra", "Docker, nginx, Railway"),
     ("stack.security", "Spring Security, JWT, OWASP"), ("stack.testing", "JUnit 5, Mockito, Testcontainers"),
     None,
-    ("forging", "honeypot-api, prismgit"), ("forged", "livestate, no-swipe-overview"),
+    ("forging", "prismgit, Lamp_ControlPanel"), ("forged", "livestate, no-swipe-overview"),
     ("status", "open to Java Trainee / JR roles"),
 ]
 COLS = 58          # chars per right-panel line
