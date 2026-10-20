@@ -72,6 +72,8 @@ def gql(query):
 u = gql(f"""{{ user(login: "{USER}") {{
   followers {{ totalCount }}
   repositories(ownerAffiliations: OWNER, first: 100, isFork: false) {{ totalCount nodes {{ stargazerCount }} }}
+  public: repositories(ownerAffiliations: OWNER, first: 100, isFork: false, privacy: PUBLIC) {{ nodes {{
+    languages(first: 10, orderBy: {{field: SIZE, direction: DESC}}) {{ edges {{ size node {{ name }} }} }} }} }}
   contributionsCollection {{ contributionCalendar {{ totalContributions
     weeks {{ contributionDays {{ contributionCount weekday }} }} }} }} }} }}""")
 cal = u["contributionsCollection"]["contributionCalendar"]
@@ -79,6 +81,13 @@ STATS = [("repos", str(u["repositories"]["totalCount"])),
          ("stars", str(sum(r["stargazerCount"] for r in u["repositories"]["nodes"]))),
          ("contributions", str(cal["totalContributions"])),
          ("followers", str(u["followers"]["totalCount"]))]
+
+# bytes per language over public repos only, so the card never reveals what private repos contain
+LANGS = {}
+for repo in u["public"]["nodes"]:
+    for e in repo["languages"]["edges"]:
+        LANGS[e["node"]["name"]] = LANGS.get(e["node"]["name"], 0) + e["size"]
+TOP = sorted(LANGS.items(), key=lambda kv: -kv[1])[:8]
 
 out, y = [], 0
 
@@ -130,11 +139,35 @@ for i, line in enumerate(BRAND):
             for m in re.finditer(r"[ .:-]+|[=+*]+|[#%]+|@+", line.ljust(bcols))]
     text(BX, by + i * BLH, runs, bcols * 5.5 / CW, 9.2)
 
-# contribution grid, stretched to the same margins as the panel above
+# full-width sections share the panel's right edge
 RIGHT = RX + COLS * CW
-y = panel_bottom + LH * 3
 gcols = (RIGHT - 30) / CW
-text(30, y, [("- contributions ", C["head"], True), ("─" * (round(gcols) - 16), C["dim"], False)], gcols)
+
+
+def wide_rule(y, label):
+    head = f"- {label} "
+    text(30, y, [(head, C["head"], True), ("─" * (round(gcols) - len(head)), C["dim"], False)], gcols)
+
+
+# languages: two columns of ASCII bars, longest bar = most used
+y = panel_bottom + LH * 3
+wide_rule(y, "languages")
+total = sum(LANGS.values()) or 1
+LC, BAR = 51, 30  # chars per column, bar cells
+col_w = (RIGHT - 30 - 30) / 2
+half = (len(TOP) + 1) // 2
+for i, (name, size) in enumerate(TOP):
+    pct = 100 * size / total
+    filled = max(1, round(BAR * size / TOP[0][1]))
+    x = 30 + (i // half) * (col_w + 30)
+    ly = y + LH * (1 + i % half) + 4
+    text(x, ly, [(name.lower().ljust(14), C["key"], True), ("█" * filled, C["head"], False),
+                 ("░" * (BAR - filled), C["dim"], False), (f"{pct:.1f}%".rjust(LC - 14 - BAR), C["val"], False)], LC)
+y += LH * (half + 1) + 4
+
+# contribution grid, stretched to the same margins as the panel above
+y += LH * 2
+wide_rule(y, "contributions")
 weeks, peak = cal["weeks"], max([d["contributionCount"] for w in cal["weeks"] for d in w["contributionDays"]] + [1])
 GX, GY = 30, y + 22
 S = (RIGHT - GX - 8) / (len(weeks) - 1)  # 8 = glyph width, so the last column ends on RIGHT
