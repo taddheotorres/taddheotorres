@@ -55,7 +55,7 @@ INFO = [
 COLS = 58          # chars per right-panel line
 CW, LH = 7.9, 17   # char width / line height in px
 
-C = dict(bg="#0a0c10", frame="#2a0a0c", dim="#3a0d10", dot="#5c1216", key="#ff3b3b", val="#f2c4c4",
+C = dict(bg="#050203", frame="#2a0a0c", dim="#3a0d10", dot="#5c1216", key="#ff3b3b", val="#f2c4c4",
          head="#d11a1a", brand=("#7a0a0e", "#c0121a", "#ff2a2a", "#ff8a8a"))
 GRID = ["#1a0608", "#5c0a0e", "#9b0f15", "#d8141c", "#ff5a5a"]
 
