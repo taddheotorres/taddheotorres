@@ -26,9 +26,13 @@
 - tests     →  100+ con JUnit/Mockito y Jasmine
 ```
 
-**[Lamp_ControlPanel](https://github.com/taddheotorres/Lamp_ControlPanel)** · *panel y CLI ligeros para gestionar el stack LAMP en Linux*
+**[Lamp_ControlPanel](https://github.com/taddheotorres/Lamp_ControlPanel)** · *gestor local de tu stack: CLI + panel liquid glass*
 ```diff
-- stack     Python · Bash · Apache 2.4 · MariaDB · PHP 8
+- stack     Python · systemd · HTML/CSS · apt / dnf / pacman / zypper
+- web       →  Apache · Nginx · PHP-FPM
+- sql       →  MariaDB · MySQL · PostgreSQL
+- nosql     →  MongoDB · Redis / Valkey · Memcached
+- panel     →  127.0.0.1 + token por arranque, acciones root vía pkexec
 ```
 
 **[no-swipe-overview](https://github.com/taddheotorres/no-swipe-overview)** · *extensión de GNOME Shell que bloquea el swipe al overview*
